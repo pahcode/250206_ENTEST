@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>250206_ENTEST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EN MEDIA Test">
+    <meta property="og:title" content="250206_ENTEST"> 
+    <meta property="og:description" content="박아현의 이엔미디어 코딩테스트 입니다.">
+    <script type="text/javascript" src="scripts/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.1/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.1/swiper-bundle.css" />
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="header">
+                <div class="dim"></div>
+                <div class="wrapper">
+                    <h1>
+                        <a class="logo" href="index.html">
+                            <img src="assets/images/logo.svg">ENTEST
+                        </a>
+                    </h1>
+                    <button class="navBtnOpen" id="navBtnOpen" type="button">
+                        <div><span></span><span></span><span></span>메뉴열기</div>
+                    </button>
+                    <nav>
+                        <ul id="menu">
+                            <li><a href="javascript:void(0);">HOME</a></li>
+                            <li><a href="javascript:void(0);">ABOUT</a></li>
+                            <li><a href="javascript:void(0);">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <h2>Home</h2>
+            <div class="homeContent">
+                <div class="intro">
+                    <section>
+                        <article>
+                            <h3>Intro</h3>
+                            <div class="introSlide">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="img"></div>
+                                            <div class="txtBox">
+                                                <h4>Lorem ipsum<br>dolor sit amet,</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur<br>sed do eiusmod tempor incididunt ut<br>labore et dolore magna aliqua.</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="img"></div>
+                                            <div class="txtBox">
+                                                <h4>Lorem ipsum<br>dolor sit amet2,</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur<br>sed do eiusmod tempor incididunt ut<br>labore et dolore magna aliqua.</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="img"></div>
+                                            <div class="txtBox">
+                                                <h4>Lorem ipsum<br>dolor sit amet3,</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur<br>sed do eiusmod tempor incididunt ut<br>labore et dolore magna aliqua.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="arr prev">이전</div>
+                                <div class="arr next">다음</div>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+
+                <div class="card">
+                    <section>
+                        <article>
+                            <h3>Card</h3>
+                            <div class="inner">
+                                <ul>
+                                    <li>
+                                        <div class="img"></div>
+                                        <div class="txtBox">
+                                            <div class="desc">
+                                                <dt>Lorem ipsum<br>dolor sit amet,</dt>
+                                                <dd>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit,</dd>
+                                            </div>
+                                            <span>Lorem ipsum dolor sit amet,</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img"></div>
+                                        <div class="txtBox">
+                                            <div class="desc">
+                                                <dt>Lorem ipsum<br>dolor sit amet,</dt>
+                                                <dd>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit,</dd>
+                                            </div>
+                                            <span>Lorem ipsum dolor sit amet,</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img"></div>
+                                        <div class="txtBox">
+                                            <div class="desc">
+                                                <dt>Lorem ipsum<br>dolor sit amet,</dt>
+                                                <dd>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit,</dd>
+                                            </div>
+                                            <span>Lorem ipsum dolor sit amet,</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img"></div>
+                                        <div class="txtBox">
+                                            <div class="desc">
+                                                <dt>Lorem ipsum<br>dolor sit amet,</dt>
+                                                <dd>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit,</dd>
+                                            </div>
+                                            <span>Lorem ipsum dolor sit amet,</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+
+                <div class="custom">
+                    <section>
+                        <article>
+                            <h3>Custom</h3>
+                            <div class="inner">
+                                <div class="contact">
+                                    <h4>Contact Us</h4>
+                                    <p>Feel free to contact us any time.<br>we will get back to you as soon as we can.</p>
+                                    <form action="#" method="POST" id="contactForm" onsubmit="return false;">
+                                        <input type="text" name="name" maxlength="20" placeholder="name">
+                                        <input type="text" name="mail" maxlength="40" placeholder="Email">
+                                        <textarea name="memo" maxlength="500" val="" placeholder="Message"></textarea>
+                                        <button class="sendBtn" id="contactApply">SEND</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer">
+                <div class="inner">
+                    <a class="logo" href="index.html"><img src="assets/images/logo.svg"></a>
+                    <span>Copyrights 2025. <b>테스트</b> All Rights Reseved</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="scripts/common.js"></script>
+</body>
+</html>
