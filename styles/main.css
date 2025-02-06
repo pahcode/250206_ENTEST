@@ -6,7 +6,7 @@
 .header .wrapper { display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center; height: 100%; padding: 0 120px; }
 h1 { height: 100%; }
 h1 .logo { display: flex; justify-content: center; align-items: center; height: 100%; text-indent: -9999px; line-height: 0; color: transparent; }
-h1 img { display: block; width: 136px; }
+h1 img { display: block; }
 #navBtnOpen { display: none; }
 #menu { display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; gap: 0 45px; }
 #menu li a { display: flex; justify-content: center; align-items: center; height: 100%; font-size: 18px; font-weight: 600; color: #1c1d1c; transition: color 0.2s; }
@@ -22,8 +22,10 @@ h1 img { display: block; width: 136px; }
     #navBtnOpen div { position: relative; width: 100%; height: 100%; }
     #navBtnOpen span { display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 24px; height: 1px; background-color: #1c1d1c; transition: transform 0.5s, width 0.2s, opacity 0.2s; }
     #navBtnOpen span:nth-of-type(1) { top: calc(50% - 7px); transform-origin: top left; }
-    #navBtnOpen span:nth-of-type(2) {  }
-    #navBtnOpen span:nth-of-type(3) { top: calc(50% + 7px); transform-origin: bottom left; box-shadow: 0 0 0 2px #fff; }
+    #navBtnOpen span:nth-of-type(3) { top: calc(50% + 7px); transform-origin: bottom left; }
+    .header.on #navBtnOpen span:nth-of-type(1) { transform: rotate(45deg) translate(-50%, -50%); top: 50%; }
+    .header.on #navBtnOpen span:nth-of-type(2) { opacity: 0; }
+    .header.on #navBtnOpen span:nth-of-type(3) { transform: rotate(-45deg) translate(-50%, -50%); top: 50%; }
     nav { position: fixed; top: 53px; right: -55%; height: 100%; width: 55%; background-color: #fff; z-index: 100; }
     #menu { flex-direction: column; padding-top: 10px; }
     #menu li { width: 100%; }
@@ -72,8 +74,8 @@ h3 { overflow: hidden; line-height: 0; text-indent: -9999px; color: transparent;
 .card ul li:nth-child(2) .img::before { background-image: url(../assets/images/img2.jpg); }
 .card ul li:nth-child(3) .img::before { background-image: url(../assets/images/img3.jpg); }
 .card ul li:nth-child(4) .img::before { background-image: url(../assets/images/img4.jpg); }
-.card ul li .txtBox { display: flex; flex-direction: column; flex-wrap: wrap; justify-content: space-between; gap: 10vh 0; padding: 30px; }
-.card ul li dt { margin-bottom: 24px; font-size: 30px; font-weight: 800; line-height: 1.2; color: #1c1d1c; }
+.card ul li .txtBox { display: flex; flex-direction: column; flex-wrap: wrap; justify-content: space-between; gap: 8vh 0; padding: 30px; }
+.card ul li dt { margin-bottom: 16px; font-size: 30px; font-weight: 800; line-height: 1.2; color: #1c1d1c; }
 .card ul li dd { font-size: 18px; color: #424242; }
 .card ul li span { font-size: 15px; color: #bdbdbd; }
 
@@ -109,7 +111,7 @@ h3 { overflow: hidden; line-height: 0; text-indent: -9999px; color: transparent;
     .card ul li span { font-size: 15px; }
 }
 @media screen and (max-width: 1000px) {
-    .introSlide { height: calc(100vh - 53px); }
+    .introSlide { height: 100vh; }
     .introSlide .swiper-slide h4 { margin-bottom: 5vh; font-size: 52px; }
     .introSlide .swiper-slide p { font-size: 20px; }
     .introSlide .prev::before { left: 30px; }
@@ -124,14 +126,16 @@ h3 { overflow: hidden; line-height: 0; text-indent: -9999px; color: transparent;
 @media screen and (max-width: 700px) {
     .card ul li { width: 100%; }
     .card ul li .img { height: 34vh; }
-    .custom::before { width: 100%; height: 260px; filter: opacity(0.9); }
-    .custom .contact { width: 100%; }
+    .custom::before { width: 100%; height: 260px; }
+    .custom::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 260px; background-color: #fff; mix-blend-mode: soft-light; opacity: 0.8; }
+    .custom .contact { width: 100%; z-index: 1; }
+    .custom.active .contact { animation: visOpacity 1.3s both 1.2s ease; }
     .custom .contact p { margin-bottom: 70px; }
 }
 @media screen and (max-width: 500px){
     .introSlide .swiper-slide .txtBox { margin: 0 50px; }
-    .introSlide .swiper-slide h4 { font-size: 30px; }
-    .introSlide .swiper-slide p { font-size: 16px; }
+    .introSlide .swiper-slide h4 { margin-left: 0; font-size: 30px; animation: visOpacity 1.5s both 1.2s ease; }
+    .introSlide .swiper-slide p { margin-left: 0; font-size: 16px; animation: visOpacity 1.5s both 1.6s ease; }
     .introSlide .arr { top: 50%; transform: translateY(-50%); width: 50px; height: 50px; }
     .introSlide .arr::before { width: 24px; height: 24px; }
     .introSlide .prev::before { left: 20px; }
