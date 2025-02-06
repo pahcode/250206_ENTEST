@@ -48,8 +48,6 @@ const introSwiper = new Swiper(".introSlide .swiper", {
         disableOnInteraction: false
     },
     mousewheel: false,
-    on: {
-    }, 
 });
 
 
